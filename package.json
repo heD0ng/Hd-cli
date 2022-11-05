@@ -1,0 +1,28 @@
+{
+  "name": "hd-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/main.js",
+  "bin": {
+    "hd-cli": "./bin/main.js"
+  },
+  "scripts": {
+    "tsc": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.1",
+    "inquirer": "^8.2.4",
+    "ncp": "^2.0.0",
+    "ora": "^5.4.1",
+    "tsc": "^2.0.4",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.8"
+  }
+}
