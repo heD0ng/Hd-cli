@@ -40,8 +40,8 @@ var downloadTemplate = function (projectParams) {
                 switch (_a.label) {
                     case 0:
                         if (!(code === 0)) return [3 /*break*/, 2];
-                        console.log(path.join(process.cwd(), projectParams.projectName));
-                        return [4 /*yield*/, (0, dir_1.copyDir)(tmpPath, path.join(process.cwd(), projectParams.projectName))];
+                        console.log(path.join(tmpPath, 'electron-learn'));
+                        return [4 /*yield*/, (0, dir_1.copyDir)(path.join(tmpPath, 'electron-learn'), path.join(process.cwd(), projectParams.projectName))];
                     case 1:
                         _a.sent();
                         // await emptyDir(tmpPath);
@@ -72,7 +72,7 @@ var createProject = function (projectName) { return tslib_1.__awaiter(void 0, vo
                 template = _a.sent();
                 params = { projectName: projectName, template: template };
                 spinner.start();
-                console.log(template);
+                console.log(params);
                 return [4 /*yield*/, downloadTemplate(params)];
             case 3:
                 _a.sent();

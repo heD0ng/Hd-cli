@@ -34,9 +34,9 @@ const downloadTemplate = (projectParams: ProjectParams) => {
         })
         childPro.on('close', async (code: number) => {
             if(code === 0) {
-                console.log(path.join(process.cwd(), projectParams.projectName))
-                await copyDir(tmpPath, path.join(process.cwd(), projectParams.projectName));
-                // await emptyDir(tmpPath);
+                console.log(path.join(tmpPath, 'electron-learn'))
+                await copyDir(path.join(tmpPath, 'electron-learn') , path.join(process.cwd(), projectParams.projectName));
+                await emptyDir(tmpPath);
                 resolve('success')
             } else {
                 reject('failed');

@@ -7,8 +7,10 @@ var ncp = require("ncp");
 var fs = tslib_1.__importStar(require("fs"));
 var chalk_1 = tslib_1.__importDefault(require("chalk"));
 var path = tslib_1.__importStar(require("path"));
+// 可递归手写或者是github上查找这个包具体使用方式；
 var copyDir = function (sourcePath, destPath) {
     ncp(sourcePath, destPath);
+    // 复制的文件共用内存地址；
 };
 exports.copyDir = copyDir;
 var emptyDir = function (filePath) {
